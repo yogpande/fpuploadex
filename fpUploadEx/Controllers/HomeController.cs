@@ -19,8 +19,8 @@ namespace fpUploadEx.Controllers
         {
             if (file.ContentLength > 0)
             {
-                string path = "~/images/" + file.FileName;
-                file.SaveAs(Server.MapPath(path));
+                string path = "http://uploadex.somee.com/fpuploadex/images/" + file.FileName;
+                file.SaveAs(path);
                 return "OK";
             }
             else
